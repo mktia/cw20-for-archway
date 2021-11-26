@@ -1,0 +1,1 @@
+bf9a871e8032c9842c125261d2b7e5d45d52fed28ddfc7049b4985b46695c2ab  cw20_for_archway.wasm

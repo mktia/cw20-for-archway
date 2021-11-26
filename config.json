@@ -1,0 +1,80 @@
+{
+  "title": "cw20-for-archway",
+  "version": "0.0.1",
+  "network": {
+    "chainId": "constantine-1",
+    "isMainnet": false,
+    "fees": {
+      "feeDenom": "uconst"
+    },
+    "gas": {
+      "prices": "0.002uconst",
+      "mode": "auto",
+      "adjustment": "1.3"
+    },
+    "wasm": {
+      "bech32Hrp": "archway",
+      "archwayd": "v0.0.0",
+      "configDir": ".archway",
+      "binary": "archwayd"
+    },
+    "urls": {
+      "rpc": {
+        "url": "https://rpc.constantine-1.archway.tech",
+        "port": 443
+      },
+      "faucets": [
+        "https://faucet.constantine-1.archway.tech"
+      ]
+    },
+    "optimizers": {
+      "docker": {
+        "type": "volume",
+        "source": "registry_cache",
+        "target": "/usr/local/cargo/registry",
+        "image": "cosmwasm/rust-optimizer:0.12.1"
+      }
+    }
+  },
+  "developer": {
+    "dApp": {
+      "gasPoolContract": null,
+      "rewardAddress": "archway1leyap5hkhfxyd29k6k2sn0xjd43mnvdkecxt3x",
+      "gasRebate": false,
+      "collectPremium": false,
+      "premiumPercentage": 0
+    },
+    "scripts": {
+      "test": "cargo unit-test",
+      "build": "cargo build",
+      "wasm": "cargo wasm",
+      "query": "archwayd query wasm",
+      "tx": "archwayd tx wasm execute"
+    },
+    "archwayd": {
+      "docker": true
+    },
+    "deployments": [
+      {
+        "type": "instatiate",
+        "address": "archway1f5g9274jan730z6f4sg5vjyrl0gpmyndedn8ul",
+        "chainId": "constantine-1",
+        "data": "{\"height\":\"721555\",\"txhash\":\"8DCEF094AF09596EB62C2DA7FA0961140C2CD9DE6F9BF0EB0CF2ED3BF5772576\",\"data\":\"0A3F0A0B696E7374616E746961746512300A2E6172636877617931663567393237346A616E3733307A366634736735766A79726C3067706D796E6465646E38756C\",\"raw_log\":\"[{\\\"events\\\":[{\\\"type\\\":\\\"instantiate\\\",\\\"attributes\\\":[{\\\"key\\\":\\\"_contract_address\\\",\\\"value\\\":\\\"archway1f5g9274jan730z6f4sg5vjyrl0gpmyndedn8ul\\\"},{\\\"key\\\":\\\"code_id\\\",\\\"value\\\":\\\"67\\\"}]},{\\\"type\\\":\\\"message\\\",\\\"attributes\\\":[{\\\"key\\\":\\\"action\\\",\\\"value\\\":\\\"instantiate\\\"},{\\\"key\\\":\\\"module\\\",\\\"value\\\":\\\"wasm\\\"},{\\\"key\\\":\\\"sender\\\",\\\"value\\\":\\\"archway1leyap5hkhfxyd29k6k2sn0xjd43mnvdkecxt3x\\\"}]}]}]\",\"logs\":[{\"events\":[{\"type\":\"instantiate\",\"attributes\":[{\"key\":\"_contract_address\",\"value\":\"archway1f5g9274jan730z6f4sg5vjyrl0gpmyndedn8ul\"},{\"key\":\"code_id\",\"value\":\"67\"}]},{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"instantiate\"},{\"key\":\"module\",\"value\":\"wasm\"},{\"key\":\"sender\",\"value\":\"archway1leyap5hkhfxyd29k6k2sn0xjd43mnvdkecxt3x\"}]}]}],\"gas_wanted\":\"191157\",\"gas_used\":\"158305\"}"
+      },
+      {
+        "type": "create",
+        "codeId": "67",
+        "chainId": "constantine-1",
+        "data": "{\"height\":\"721551\",\"txhash\":\"F5B44D410D690A396A88660CD1F6B0083ED7B88713AC4FC0FDC7532D29EAFA30\",\"data\":\"0A100A0A73746F72652D636F646512020843\",\"raw_log\":\"[{\\\"events\\\":[{\\\"type\\\":\\\"message\\\",\\\"attributes\\\":[{\\\"key\\\":\\\"action\\\",\\\"value\\\":\\\"store-code\\\"},{\\\"key\\\":\\\"module\\\",\\\"value\\\":\\\"wasm\\\"},{\\\"key\\\":\\\"sender\\\",\\\"value\\\":\\\"archway1leyap5hkhfxyd29k6k2sn0xjd43mnvdkecxt3x\\\"}]},{\\\"type\\\":\\\"store_code\\\",\\\"attributes\\\":[{\\\"key\\\":\\\"code_id\\\",\\\"value\\\":\\\"67\\\"}]}]}]\",\"logs\":[{\"events\":[{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"store-code\"},{\"key\":\"module\",\"value\":\"wasm\"},{\"key\":\"sender\",\"value\":\"archway1leyap5hkhfxyd29k6k2sn0xjd43mnvdkecxt3x\"}]},{\"type\":\"store_code\",\"attributes\":[{\"key\":\"code_id\",\"value\":\"67\"}]}]}],\"gas_wanted\":\"1854312\",\"gas_used\":\"1436933\"}"
+      },
+      {
+        "type": "create",
+        "codeId": "66",
+        "chainId": "constantine-1",
+        "data": "{\"height\":\"721505\",\"txhash\":\"84106909670EE57D6564D6C0232AF2439831098EEAD5ECC80CBCABB252CA0B2B\",\"data\":\"0A100A0A73746F72652D636F646512020842\",\"raw_log\":\"[{\\\"events\\\":[{\\\"type\\\":\\\"message\\\",\\\"attributes\\\":[{\\\"key\\\":\\\"action\\\",\\\"value\\\":\\\"store-code\\\"},{\\\"key\\\":\\\"module\\\",\\\"value\\\":\\\"wasm\\\"},{\\\"key\\\":\\\"sender\\\",\\\"value\\\":\\\"archway1leyap5hkhfxyd29k6k2sn0xjd43mnvdkecxt3x\\\"}]},{\\\"type\\\":\\\"store_code\\\",\\\"attributes\\\":[{\\\"key\\\":\\\"code_id\\\",\\\"value\\\":\\\"66\\\"}]}]}]\",\"logs\":[{\"events\":[{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"store-code\"},{\"key\":\"module\",\"value\":\"wasm\"},{\"key\":\"sender\",\"value\":\"archway1leyap5hkhfxyd29k6k2sn0xjd43mnvdkecxt3x\"}]},{\"type\":\"store_code\",\"attributes\":[{\"key\":\"code_id\",\"value\":\"66\"}]}]}],\"gas_wanted\":\"1854312\",\"gas_used\":\"1436933\"}"
+      }
+    ]
+  },
+  "path": "/home/mktia/Dev/Rust/cw20-for-archway",
+  "type": "Increment"
+}
